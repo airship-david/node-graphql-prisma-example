@@ -1,14 +1,20 @@
 {
   "name": "node-graphql-prisma-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Node implementation of GraphQL with Prisma.",
+  "author": "David Engel",
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "graphql",
+    "prisma"
+  ],
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node src/index.js",
+    "explore": "npx prisma studio --experimental",
+    "migrate": "npx prisma migrate save --experimental && npx prisma migrate up --experimental && npx prisma generate"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@prisma/client": "^2.4.1",
     "bcryptjs": "^2.4.3",

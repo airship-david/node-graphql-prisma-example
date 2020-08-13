@@ -4,19 +4,17 @@ A Node implementation of GraphQL with Prisma.
 ## Setup
 ```
 npm install
-npx prisma migrate save --experimental
-npx prisma migrate up --experimental
-npx prisma generate
+npm run migrate
 ```
 
 ## Run Server
 ```
-node src/index.js
+npm run serve
 ```
 
 ## Explore Data
 ```
-npx prisma studio --experimental
+npm run explore
 ```
 
 ## Mutations
