@@ -19,7 +19,7 @@ node src/index.js
 npx prisma studio --experimental
 ```
 
-## Queries/Mutations
+## Mutations
 **Sign Up**
 ```
 mutation {
@@ -94,6 +94,7 @@ mutation {
 }
 ```
 
+## Queries
 **Feed**
 ```
 query {
@@ -122,6 +123,42 @@ query {
           email
         }
       }
+    }
+  }
+}
+```
+
+## Subscriptions
+**New Links**
+```
+subscription {
+  newLink {
+      id
+      url
+      description
+      postedBy {
+        id
+        name
+        email
+      }
+  }
+}
+```
+
+**New Votes**
+```
+subscription {
+  newVote {
+    id
+    link {
+      id
+      url
+      description
+    }
+    user {
+      id
+      name
+      email
     }
   }
 }
